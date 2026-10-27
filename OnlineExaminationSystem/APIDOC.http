@@ -1,0 +1,81 @@
+#API for QuestionListCreateView
+###
+GET http://127.0.0.1:8000/question/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/question/
+Content-Type: application/json
+
+{
+    "question" : "Which datatype stores key-value pairs in python?",
+    "option_a" : "List",
+    "option_b" : "Tuple",
+    "option_c" : "Set",
+    "option_d" : "Dictionary",
+    "correct_answer" : "d"
+}
+
+#API for QuestionRetriveUpdateDeleteView
+###
+GET http://127.0.0.1:8000/question/2/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/question/3/
+Content-Type: application/json
+
+{
+    "question" : "Which datatype stores unique data in python?",
+    "option_a" : "List",
+    "option_b" : "Tuple",
+    "option_c" : "Set",
+    "option_d" : "Dictionary",
+    "correct_answer" : "c"
+}
+
+###
+DELETE http://127.0.0.1:8000/question/3/
+Content-Type: application/json
+
+#API for SubmissionListCreateView
+###
+GET http://127.0.0.1:8000/submission/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/submission/
+Content-Type: application/json
+
+{
+    "student_name" : "Manu",
+    "question_id" : 1,
+    "answer" : "c"
+}
+
+#API for SubmissionRetriveUpdateDeleteView
+###
+GET http://127.0.0.1:8000/submission/2/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/submission/2/
+Content-Type: application/json
+
+{
+    "student_name" : "Hari",
+    "question_id" : 1,
+    "answer" : "b"
+}
+
+###
+DELETE http://127.0.0.1:8000/submission/3/
+
+#API for SubmissionEvaluate
+###
+PUT http://127.0.0.1:8000/submission/2/evaluate/
+Content-Type: application/json
+
+{
+    "status" : "Wrong"
+}
