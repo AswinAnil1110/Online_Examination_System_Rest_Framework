@@ -55,9 +55,9 @@ class SubmissionListCreateView(APIView):
             return Response({"Message":"Submission Added successfully"})
         else:
             return Response(data=serializer_instance.errors)
-class SubmissionRetriveUpdateDeleteView(APIView):
+class SubmissionRetrieveUpdateDeleteView(APIView):
     def get(self,request,pk):
-        qs = SubmissionDb.objects.get(id=pk)
+        qs = get_object_or_404(SubmissionDb,id=pk)
         serializer_instance = SubmissionSerializer(qs)
         return Response(data=serializer_instance.data)
     

@@ -24,7 +24,7 @@ urlpatterns = [
     path('question/<int:pk>/',views.QuestionRetriveUpdateDeleteView.as_view()),
 
     path('submission/',views.SubmissionListCreateView.as_view()),
-    path('submission/<int:pk>/',views.SubmissionRetriveUpdateDeleteView.as_view()),
+    path('submission/<int:pk>/',views.SubmissionRetrieveUpdateDeleteView.as_view()),
 
     path('submission/<int:pk>/evaluate/',views.SubmissionEvaluate.as_view())
 ]
